@@ -1,0 +1,9 @@
+import { CarImage } from '../infra/typeorm/entities/CarImage';
+
+interface ICarsImagesRepository {
+  create(car_id: string, image_name: string): Promise<CarImage>;
+  delete(carsImages: CarImage[]): Promise<CarImage[]>;
+  findCarsImages(car_id: string, images_id?: string[]): Promise<CarImage[]>;
+}
+
+export { ICarsImagesRepository };
