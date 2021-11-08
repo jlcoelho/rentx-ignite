@@ -26,6 +26,7 @@ export class CreateRentals1633343435275 implements MigrationInterface {
           },
           {
             name: 'end_date',
+            isNullable: true,
             type: 'timestamp',
           },
           {
@@ -34,6 +35,7 @@ export class CreateRentals1633343435275 implements MigrationInterface {
           },
           {
             name: 'total',
+            isNullable: true,
             type: 'numeric',
           },
           {
@@ -70,6 +72,6 @@ export class CreateRentals1633343435275 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('rentails');
+    await queryRunner.dropTable('rentals');
   }
 }
